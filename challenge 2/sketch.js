@@ -52,6 +52,14 @@ ellipse(xnuvola +280, ynuvola+130, 80, 80);
 ellipse(xnuvola +275, ynuvola+90, 80, 80);
 
 
+//xrocket = (xrocket +1) % xMax;
+xnuvola = xnuvola + 1;
+// quando la yrocket sarà oltre una certa soglia allora dobbiamo resettare la y del razzo
+let soglia = +xMax * 0.6;
+if(xnuvola > soglia){
+  xnuvola = -xMax
+}
+
 
 //camino
 fill("#514b48ff");
